@@ -5,9 +5,150 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Association I KE KUFA</title>
-  <!-- (Styles et script omis ici pour compacité) -->
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f4; }
+    header, footer { background: #2b6e44; color: white; padding: 20px 0; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    .container { max-width: 1000px; margin: auto; padding: 20px; background: white; }
+    h1, h2, h3 { color: #2b6e44; }
+    .project-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    .project-table th, .project-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+    .gallery img { width: 100%; height: auto; border-radius: 5px; }
+    .contact { margin-top: 20px; line-height: 1.8; }
+    .lang-toggle { text-align: center; margin: 10px; }
+    .lang-toggle button { margin: 0 10px; padding: 5px 10px; }
+    form { background-color: #eef2ee; padding: 20px; border-radius: 8px; }
+    input, textarea { width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+    input[type="submit"] { background-color: #2b6e44; color: white; border: none; cursor: pointer; }
+    input[type="submit"]:hover { background-color: #245b38; }
+    .logo { max-height: 80px; margin-bottom: 10px; }
+  </style>
+  <script>
+    function switchLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+      });
+    }
+    window.onload = () => switchLanguage('fr');
+  </script>
 </head>
 <body>
-  <!-- (Contenu principal déjà intégré dans le document Canvas) -->
+  <header>
+    <img src="logo.png" alt="Logo I KE KUFA" class="logo">
+    <h1>I KE KUFA</h1>
+    <p data-lang="fr">Faisons bien, ensemble</p>
+    <p data-lang="en">Let's do good, together</p>
+    <div class="lang-toggle">
+      <button onclick="switchLanguage('fr')">FR</button>
+      <button onclick="switchLanguage('en')">EN</button>
+    </div>
+    <nav>
+      <a href="#qui">Qui sommes-nous</a>
+      <a href="#mission">Missions</a>
+      <a href="#projets">Projets</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="qui">
+      <h2 data-lang="fr">Qui sommes-nous ?</h2>
+      <h2 data-lang="en">Who are we?</h2>
+      <p data-lang="fr">I KE KUFA est une association engagée dans le développement durable, l’autonomisation des femmes et des jeunes, et la valorisation des ressources locales au Burkina Faso.</p>
+      <p data-lang="en">I KE KUFA is an association committed to sustainable development, empowering women and youth, and enhancing local resources in Burkina Faso.</p>
+    </section>
+
+    <section id="mission">
+      <h2 data-lang="fr">Nos missions</h2>
+      <h2 data-lang="en">Our missions</h2>
+      <ul data-lang="fr">
+        <li>Promouvoir l’irrigation durable</li>
+        <li>Accompagner les exploitants agricoles</li>
+        <li>Offrir des formations pratiques</li>
+        <li>Construire des infrastructures durables</li>
+        <li>Faciliter les partenariats</li>
+      </ul>
+      <ul data-lang="en">
+        <li>Promote sustainable irrigation</li>
+        <li>Support local farmers</li>
+        <li>Provide practical training</li>
+        <li>Build sustainable infrastructures</li>
+        <li>Facilitate partnerships</li>
+      </ul>
+    </section>
+
+    <section id="projets">
+      <h2 data-lang="fr">Nos projets phares</h2>
+      <h2 data-lang="en">Our flagship projects</h2>
+      <table class="project-table" data-lang="fr">
+        <tr><th>Projet</th><th>Localisation</th><th>Résumé</th></tr>
+        <tr><td>Périmètres Agroécologiques</td><td>Dionouna & Marebama</td><td>4 ha avec irrigation solaire, formation, accompagnement.</td></tr>
+        <tr><td>Siège intelligent</td><td>Banfora</td><td>Bâtiment écologique moderne et polyvalent.</td></tr>
+        <tr><td>Chambre froide</td><td>Région des Cascades</td><td>Conservation des productions agricoles.</td></tr>
+        <tr><td>Formation</td><td>Sites divers</td><td>Renforcement de capacités pour 200 personnes.</td></tr>
+      </table>
+      <table class="project-table" data-lang="en">
+        <tr><th>Project</th><th>Location</th><th>Summary</th></tr>
+        <tr><td>Agroecological sites</td><td>Dionouna & Marebama</td><td>4 ha with solar irrigation, training, and support.</td></tr>
+        <tr><td>Smart Headquarters</td><td>Banfora</td><td>Modern ecological multipurpose building.</td></tr>
+        <tr><td>Cold Room</td><td>Cascades Region</td><td>Storage for agricultural produce.</td></tr>
+        <tr><td>Training Program</td><td>Various sites</td><td>Capacity building for 200 people.</td></tr>
+      </table>
+    </section>
+
+    <section id="galerie">
+      <h2 data-lang="fr">Galerie photos</h2>
+      <h2 data-lang="en">Photo Gallery</h2>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Projet 1">
+        <img src="photo2.jpg" alt="Projet 2">
+        <img src="photo3.jpg" alt="Projet 3">
+        <img src="photo4.jpg" alt="Projet 4">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 data-lang="fr">Contact</h2>
+      <h2 data-lang="en">Contact</h2>
+      <div class="contact" data-lang="fr">
+        <p><strong>Adresse :</strong> Banfora, Burkina Faso</p>
+        <p><strong>Email :</strong> ikekoufa@gmail.com</p>
+        <p><strong>Téléphone :</strong> +226 XX XX XX XX</p>
+        <p><strong>Facebook :</strong> <a href="https://web.facebook.com/ikekufa" target="_blank">Page officielle</a></p>
+      </div>
+      <div class="contact" data-lang="en">
+        <p><strong>Address:</strong> Banfora, Burkina Faso</p>
+        <p><strong>Email:</strong> ikekoufa@gmail.com</p>
+        <p><strong>Phone:</strong> +226 XX XX XX XX</p>
+        <p><strong>Facebook:</strong> <a href="https://web.facebook.com/ikekufa" target="_blank">Official page</a></p>
+      </div>
+
+      <div data-lang="fr">
+        <h3>Formulaire de contact</h3>
+        <form action="https://formspree.io/f/xeqybqzp" method="POST">
+          <input type="text" name="nom" placeholder="Votre nom" required>
+          <input type="email" name="email" placeholder="Votre email" required>
+          <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+          <input type="submit" value="Envoyer">
+        </form>
+      </div>
+
+      <div data-lang="en">
+        <h3>Contact Form</h3>
+        <form action="https://formspree.io/f/xeqybqzp" method="POST">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          <input type="submit" value="Send">
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 I KE KUFA. Tous droits réservés. | All rights reserved.</p>
+  </footer>
 </body>
 </html>
